@@ -1,6 +1,21 @@
 # Clinical Trial Patient Matching System
 
-This project helps match patients to relevant clinical trials based on their medical profiles and the eligibility criteria defined by clinical studies.
+This project aims to assist in matching patients with suitable clinical trials based on their medical history and the eligibility criteria defined by various trials. It implements and compares three approaches:
+
+1. **Rule-Based Matching**
+2. **Semantic Matching using Sentence-BERT**
+3. **Hybrid Matching System** (combines the above two)
+
+This system is designed to support healthcare professionals and researchers in finding relevant trials quickly and accurately.
+
+---
+
+##  Features
+
+- Match patients using strict eligibility rules (age, gender, conditions)
+- Match based on semantic understanding of unstructured medical text using BERT
+- Combine both logic and language intelligence for best results
+- Easily adaptable to different datasets
 
 It implements three approaches:
 
