@@ -1,0 +1,6 @@
+trial_id,title,inclusion_criteria,exclusion_criteria,gender
+T101,Diabetes Management Study,"Age between 30 and 65, Type 2 Diabetes",Heart Failure,All
+T102,Lung Cancer Trial,"Age above 50, Lung Cancer",Non-smokers,Male
+T103,Breast Cancer Immunotherapy,Breast Cancer,None,Female
+T104,Asthma New Drug Trial,"Asthma, Age between 18 and 50",Smoker,All
+T105,Healthy Volunteer Study,Healthy volunteer,Any medical condition,All

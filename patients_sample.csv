@@ -1,0 +1,11 @@
+patient_id,name,age,gender,condition
+1,Alice,34,Female,"Type 2 Diabetes, Hypertension"
+2,Bob,58,Male,"COPD, Smoker"
+3,Charlie,45,Male,Breast Cancer
+4,Diana,60,Female,Type 2 Diabetes
+5,Ethan,29,Male,Healthy volunteer
+6,Fiona,70,Female,Heart Failure
+7,George,50,Male,Hypertension
+8,Hannah,38,Female,Asthma
+9,Ian,65,Male,"Lung Cancer, Smoker"
+10,Julia,55,Female,Type 1 Diabetes
