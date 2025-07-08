@@ -1,87 +1,82 @@
+# Clinical Trial Patient Matching System
 
-#Clinical Trial Patient Matching System
 This project helps match patients to relevant clinical trials based on their medical profiles and the eligibility criteria defined by clinical studies.
 
 It implements three approaches:
 
-1. Rule-Based Matching
-How it works:
+## 1. Rule-Based Matching
+
+**How it works:**
 
 Uses structured filters such as:
 
-Age range
-
-Gender match
-
-Exclusion keyword check
+- Age range
+- Gender match
+- Exclusion keyword check
 
 Matches patients only if they strictly meet these hard-coded rules.
 
-Pros:
+**Pros:**
 
-Fast and interpretable
+- Fast and interpretable
+- Ensures only eligible patients are matched
 
-Ensures only eligible patients are matched
+**Cons:**
 
-Cons:
+- Doesn't handle complex or free-text descriptions well
+- Can miss potential matches due to rigid logic
 
-Doesn't handle complex or free-text descriptions well
+---
 
-Can miss potential matches due to rigid logic
+## 2. Semantic Similarity Matching (BERT)
 
-2. Semantic Similarity Matching (BERT)
-How it works:
+**How it works:**
 
 Uses a pre-trained Sentence-BERT model to convert:
 
-Patient descriptions
+- Patient descriptions
+- Trial inclusion/exclusion criteria
 
-Trial inclusion/exclusion criteria
-into semantic vector embeddings
+into semantic vector embeddings.  
+Matches are based on cosine similarity between these vectors.
 
-Matches based on cosine similarity of these vectors
+**Pros:**
 
-Pros:
+- Understands meaning, not just keywords
+- Works well on real-world, unstructured text
 
-Understands meaning, not just keywords
+**Cons:**
 
-Works well on real-world, unstructured text
+- Ignores hard constraints like age/gender
+- May suggest incorrect matches without domain filters
 
-Cons:
+---
 
-Ignores hard constraints like age/gender
+## 3. Hybrid Matching System
 
-May suggest incorrect matches without domain filters
-
-3. Hybrid Matching System ✅
-How it works:
+**How it works:**
 
 Combines rule-based filtering and semantic similarity scoring:
 
-Filters patients based on age, gender, and exclusion criteria
+- Filters patients based on age, gender, and exclusion criteria
+- Then applies BERT-based similarity scoring
+- Only eligible patients are semantically matched
 
-Then applies BERT-based similarity scoring
+**Pros:**
 
-Only eligible patients are semantically matched
+- Best of both worlds: accurate, meaningful, and safe
+- Ideal for real-world scenarios involving medical data
 
-Pros:
+**Cons:**
 
-Best of both worlds: accurate, meaningful, and safe
+- Slightly more complex and computationally heavier
 
-Ideal for real-world scenarios involving medical data
+---
 
-Cons:
+## Technologies Used
 
-Slightly more complex and computationally heavier
-
-Technologies Used
-Python (Pandas, NumPy)
-
-Sentence-BERT via sentence-transformers
-
-Scikit-learn (optional for extensions)
-
-Jupyter Notebook / Google Colab
-
-Sample patient & trial datasets (manually generated)
-
+- Python (Pandas, NumPy)
+- Sentence-BERT via `sentence-transformers`
+- Scikit-learn (optional for extensions)
+- Jupyter Notebook / Google Colab
+- Sample patient and trial datasets (manually generated)
